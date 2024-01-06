@@ -4,46 +4,45 @@ import Image from 'next/image'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
 import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
+import logoAdobe from '@/images/logos/adobe.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'Adobe Commerce Storefront Events SDK',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+      'JS SDK enabling merchants and third party Adobe Commerce plugins to consume events across the storefront.',
+    link: { href: 'https://www.npmjs.com/package/@adobe/magento-storefront-events-sdk', label: 'npmjs.com' },
+    logo: logoAdobe,
   },
   {
-    name: 'Animaginary',
+    name: 'TimeBlock',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
+      `Organization productivity application helping an organization focus on their overarching vision, achieving goals, and following through with plans.`,
     link: { href: '#', label: 'github.com' },
     logo: logoAnimaginary,
   },
   {
-    name: 'HelioStream',
+    name: 'PWA Studio Venia Data Collector',
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
+      'PWA Storefront data collector for Adobe Commerce.',
+    link: { href: 'https://www.npmjs.com/package/@magento/venia-data-collector', label: 'npmjs.com' },
+    logo: logoAdobe,
+  },
+  {
+    name: 'MyHydro',
+    description:
+      'Web App MVP for Hydroponics hardware startup idea. Automating data collection, watering, and monitoring using a SAAS model. ',
     link: { href: '#', label: 'github.com' },
     logo: logoHelioStream,
   },
   {
-    name: 'cosmOS',
+    name: 'Word Paths',
     description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
-  },
-  {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+      `Word puzzler inspired by Wordle. It uses Djikstra's to determine the shortest path between two four letter words.`,
+    link: { href: 'https://github.com/abrhim/wordpaths', label: 'github.com' },
+    logo: logoPlanetaria,
   },
 ]
 
@@ -67,7 +66,7 @@ export default function Projects() {
   return (
     <SimpleLayout
       title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m currently working on and most excited about. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
     >
       <ul
         role="list"

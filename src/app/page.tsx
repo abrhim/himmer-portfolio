@@ -9,19 +9,20 @@ import {
   GitHubIcon,
   InstagramIcon,
   LinkedInIcon,
-  TwitterIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
-import image1 from '@/images/photos/image-1.jpg'
-import image2 from '@/images/photos/image-2.jpg'
-import image3 from '@/images/photos/image-3.jpg'
-import image4 from '@/images/photos/image-4.jpg'
-import image5 from '@/images/photos/image-5.jpg'
+import logoPcc from '@/images/logos/pcc.svg'
+import logoByuh from '@/images/logos/byuh.svg'
+import logoSelfpause from '@/images/logos/selfpause.svg'
+import logoAdobe from '@/images/logos/adobe.svg'
+import logoUnli from '@/images/logos/unli.svg'
+import imageFam from '@/images/photos/fam.jpg'
+import imageSunflower from '@/images/photos/mammoth-sunflower.jpg'
+import imageBoys from '@/images/photos/boys.jpeg'
+import imageBobcat from '@/images/photos/bobcat.png'
+import imageCouple from '@/images/photos/abram-elyssa.png'
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
+
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -185,11 +186,13 @@ function Role({ role }: { role: Role }) {
 }
 
 function Resume() {
+  const pdfUrl = "assets/AbramHimmerResume.pdf"
+
   let resume: Array<Role> = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
-      logo: logoPlanetaria,
+      company: 'Adobe',
+      title: 'Lead Frontend Engineer',
+      logo: logoAdobe,
       start: '2019',
       end: {
         label: 'Present',
@@ -197,25 +200,32 @@ function Resume() {
       },
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
+      company: 'Selfpause',
+      title: 'CTO/Founder',
+      logo: logoSelfpause,
+      start: '2020',
+      end: '2022',
+    },
+    {
+      company: 'Unli',
+      title: 'Founding Full Stack Engineer',
+      logo: logoUnli,
+      start: '2018',
       end: '2019',
     },
     {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
+      company: `Brigham Young University - Hawai'i`,
+      title: 'Web Developer Manager',
+      logo: logoByuh,
+      start: '2017',
+      end: '2018',
     },
     {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      company: 'Polynesian Cultural Center',
+      title: 'Data Engineer Intern',
+      logo: logoPcc,
+      start: '2018',
+      end: '2018',
     },
   ]
 
@@ -230,7 +240,7 @@ function Resume() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
+      <Button target="_blank" href={pdfUrl} variant="secondary" className="group mt-6 w-full">
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
@@ -244,7 +254,7 @@ function Photos() {
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
+        {[imageBoys,imageSunflower,imageCouple,imageFam,imageBobcat].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
@@ -254,7 +264,7 @@ function Photos() {
           >
             <Image
               src={image}
-              alt=""
+              alt="Picture of something about me"
               sizes="(min-width: 640px) 18rem, 11rem"
               className="absolute inset-0 h-full w-full object-cover"
             />
@@ -273,32 +283,24 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Software designer, founder, and amateur astronaut.
+            Frontend engineer, gardener, and father.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+            I’m Abram, a dad who loves to build things living in Liberty, Missouri. I'm a lead frontend engineer at Adobe building data collection pipelines enabling ML services for Adobe Commerce and architecting developer portals for Adobe Express.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
-              href="https://twitter.com"
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-            />
-            <SocialLink
-              href="https://instagram.com"
+              href="https://www.instagram.com/himmer_homestead/"
               aria-label="Follow on Instagram"
               icon={InstagramIcon}
             />
             <SocialLink
-              href="https://github.com"
+              href="https://github.com/abrhim"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
             <SocialLink
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/abram-himmer"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
@@ -314,7 +316,7 @@ export default async function Home() {
             ))}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
+            {/* <Newsletter /> */}
             <Resume />
           </div>
         </div>

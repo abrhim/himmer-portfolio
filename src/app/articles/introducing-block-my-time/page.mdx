@@ -1,0 +1,30 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+
+export const article = {
+  author: 'Abram Himmer',
+  date: '2023-12-15',
+  title: 'Introducing TimeBlock',
+  description:
+    'I have ADHD (or act like I do) and focusing on a task is important. So I am going to make TimeBlock.',
+}
+import userFlow from "./userFlow.png"
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+I'm making a productivity app and there a plethora of existing ones that do something very very similar. Why make another? Because I want one that has a view page that I can display and how my family how we are doing on a daily basis with our family identity statement at the top along with the progress we've made in creating habits. 
+
+Here's a sketch of the user flow.
+
+<Image src={userFlow} alt="Sketch of user for time block" height="150px" />
+
+Each user can create an "identity statement" and create "habits" that are attached to "identity statement". The relationship will be many to many. Each habit can be placed on the calendar in the app for a "block" of time. 
+
+For example, if I had the identity statement of relating to being physically health I may choose to have the habit of exercising. Then I may block out 5 mins on a schedule to work on that habit. I can sync it to my google calendar and it would create an event for me and give me notifications.
+
+I will write a seperate post about the principles behind the efficacy of operating within a system like this, but for now [this](https://jamesclear.com/goals-systems) and [this](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://jamesclear.com/wp-content/uploads/2016/05/CU-Identity-Based-Habits.pdf?__s=hv9sbg1yvq8u2epp4jmo#:~:text=The%20interior%20of%20behavior%20change,easier%20to%20change%20your%20actions.) should suffice for the curious. 
