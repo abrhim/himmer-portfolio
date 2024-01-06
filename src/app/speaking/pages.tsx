@@ -40,11 +40,11 @@ function Appearance({
   )
 }
 
-export const metadata: Metadata = {
-  title: 'Speaking',
-  description:
-    'I’ve spoken at events all around the world and been interviewed for many podcasts.',
-}
+// export const metadata: Metadata = {
+//   title: 'Speaking',
+//   description:
+//     'I’ve spoken at events all around the world and been interviewed for many podcasts.',
+// }
 
 export default function Speaking() {
   return (
