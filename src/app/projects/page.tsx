@@ -5,7 +5,7 @@ import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import logoAnimaginary from '@/images/logos/animaginary.svg'
 import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoAdobe from '@/images/logos/adobe.svg'
+import logoAdobe from '@/images/logos/adobe2.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
 
 const projects = [
