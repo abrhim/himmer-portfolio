@@ -72,15 +72,14 @@ export default function About() {
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-I'm frontend engineer driven by a fascination for the systems and tools that shape our lives. My passion lies in understanding how these elements influence long-term outcomes for individuals.
+{`I'm frontend engineer driven by a fascination for the systems and tools that shape our lives. My passion lies in understanding how these elements influence long-term outcomes for individuals.`}
 
             </p>
             <p>
-Creating things to enhance the lives of those around me has been a constant in my journey. I took on the role of general contractor for a 4200 square foot home, driven by the desire to provide my family with a better living space. I've also developed software tailored to assist my family and more, always seeking ways to improve outcomes through innovation.
-            </p>
+{`Creating things to enhance the lives of those around me has been a constant in my journey. I took on the role of general contractor for a 4200 square foot home, driven by the desire to provide my family with a better living space. I've also developed software tailored to assist my family and more, always seeking ways to improve outcomes through innovation.`}            </p>
             <p>
 
-My goal is simple yet profound: to craft software solutions that genuinely uplift and improve people's lives. I believe in the power of technology to make a meaningful difference, and I'm dedicated to leveraging my skills to create tools that empower individuals to thrive.</p>
+My goal is simple yet profound: to craft software solutions that genuinely uplift and improve {`people'`}s lives. I believe in the power of technology to make a meaningful difference, and {`I'm`} dedicated to leveraging my skills to create tools that empower individuals to thrive.</p>
           </div>
         </div>
         <div className="lg:pl-20">

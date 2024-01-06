@@ -286,7 +286,7 @@ export default async function Home() {
             Frontend engineer, gardener, and father.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Abram, a dad who loves to build things living in Liberty, Missouri. I'm a lead frontend engineer at Adobe building data collection pipelines enabling ML services for Adobe Commerce and architecting developer portals for Adobe Express.
+            {`I’m`} Abram, a dad who loves to build things living in Liberty, Missouri. {`I'm`} a lead frontend engineer at Adobe building data collection pipelines enabling ML services for Adobe Commerce and architecting developer portals for Adobe Express.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
